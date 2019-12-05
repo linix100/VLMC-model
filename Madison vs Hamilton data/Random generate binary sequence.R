@@ -1,0 +1,14 @@
+Random_Bi<-function(N){
+  x1<-runif(N,0,1)
+  k=1
+  while(k<N+1){
+    if(x1[k]<0.5){
+      x1[k]<-0
+    }else{
+      x1[k]<-1
+    }
+    k<-k+1
+  }
+  print(x1)
+  return(x1)
+}

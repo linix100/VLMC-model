@@ -1,0 +1,14 @@
+
+[1] 1-450
+
+
+‘vlmc’ a Variable Length Markov Chain;	 alphabet 'abcdefghijklmnopqrsuwx', |alphabet| = 22, n = 450.Call: vlmc(dts = a6, cutoff.prune = 3) -> extensions (= $size ) :   ord.MC   context nr.leaves     total         3        99        84      4358 AIC =  5386 > source('~/Documents/R/garch/garchscan.R')> garchscan()
+
+
+Read 22 items[1] 500-600
+‘vlmc’ a Variable Length Markov Chain;	 alphabet 'bdfghijklmnoq', |alphabet| = 13, n = 101.Call: vlmc(dts = a6, cutoff.prune = 3) -> extensions (= $size ) :   ord.MC   context nr.leaves     total         2        15        12       392 AIC =  657.5 
+
+
+
+
+> source('~/Documents/R/garch/garchscan.R')> garchscan()Loading required package: MASSRead 22 items[1] 101‘vlmc’ a Variable Length Markov Chain;	 alphabet 'bdfghijklmnoq', |alphabet| = 13, n = 101.Call: vlmc(dts = a6, cutoff.prune = 3) -> extensions (= $size ) :   ord.MC   context nr.leaves     total         2        15        12       392 AIC =  657.5 > source('~/Documents/R/garch/garchscan.R')> vc<-garchscan()Read 22 items[1] 450> source('~/Documents/R/garch/garchMatrix.R')> source('~/Documents/R/garch/garchloglike.R')> garchloglike(vc,1)Read 22 items[1] 1[1] 2[1] 3[1] 4[1] 5[1] 6[1] 7[1] 8[1] 9[1] 10[1] 11[1] 12[1] 13[1] 14[1] 15[1] 16[1] 17[1] 18[1] 19[1] 20[1] 21[1] 22[1] 23[1] 24[1] 25[1] 26[1] 27[1] 28[1] 29[1] 30[1] 31[1] 32[1] 33[1] 34[1] 35[1] 36[1] 37[1] 38[1] 39[1] 40[1] 41[1] 42[1] 43[1] 44[1] 45 [1] -12.988832 -11.885537 -14.640107 -12.378344 -10.422281 -14.090297 -13.782987 -12.283034 -11.867518 -11.659879 -11.585432  -8.383433[13] -11.159104 -10.404263 -11.025816 -11.483153 -11.382908 -13.713664 -12.216894 -15.233245 -12.347572 -10.294448  -7.783224 -12.619506[25] -13.646855 -11.649971 -13.563968 -13.666354 -11.025816 -12.327370 -14.604637 -13.531342 -12.347572 -12.727720 -13.030906 -11.685197[37] -13.040719 -13.227912  -8.958797 -11.119883 -10.866967 -12.113135 -10.945529 -11.890220 -10.384060> garchloglike(vc,2)Read 22 items[1] 1[1] 2[1] 3[1] 4[1] 5[1] 6[1] 7[1] 8[1] 9[1] 10 [1] -5.634790 -3.688879 -2.639057 -3.583519 -6.396930 -5.298317 -5.049856 -5.114395 -2.484907 -3.583519> source('~/Documents/R/garch/garchTscore.R')> source('~/Documents/R/garch/garchloglike.R')> source('~/Documents/R/garch/garchMatrix.R')> source('~/Documents/R/garch/garchscan.R')> garchtscore()Read 22 items[1] 450Read 22 items[1] 1[1] 2[1] 3[1] 4[1] 5[1] 6[1] 7[1] 8[1] 9[1] 10[1] 11[1] 12[1] 13[1] 14[1] 15[1] 16[1] 17[1] 18[1] 19[1] 20[1] 21[1] 22[1] 23[1] 24[1] 25[1] 26[1] 27[1] 28[1] 29[1] 30[1] 31[1] 32[1] 33[1] 34[1] 35[1] 36[1] 37[1] 38[1] 39[1] 40[1] 41[1] 42[1] 43[1] 44[1] 45Read 22 items[1] 1[1] 2[1] 3[1] 4[1] 5[1] 6[1] 7[1] 8[1] 9[1] 10[1] -16.02058

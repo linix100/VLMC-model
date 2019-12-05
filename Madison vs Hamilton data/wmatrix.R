@@ -1,0 +1,54 @@
+wmatrix<-function(choosedir){
+  #find the original madison's number of slices, get how many letters in each line.
+  numberofslices<-3
+  directory2<-"/Users/Linix100/Documents/1-150.txt"
+  #the original one
+  #directory2<-"/Users/Linix100/Documents/Irosha/federalist_ Preprocessed_ papers-1/Madison/fileproc_37 copy 2.txt"
+  
+  
+  a1<-scan(directory2,what="")
+  a2<-as.character(a1)
+  a3<-strsplit(a2,"")
+  a4<-unlist(a3)
+  a5<-tolower(a4)
+  
+  t_end<-length(a5)
+  #the number of eliment in each slice
+  x<-floor(t_end/numberofslices)
+  
+  
+  
+  # 1 means intra(self)  otherwise means inter
+  if(choosedir==1){
+    directory2<-"/Users/Linix100/Documents/1-150.txt"
+    #directory2<-"/Users/Linix100/Documents/Irosha/federalist_ Preprocessed_ papers-1/Madison/fileproc_37 copy 2.txt"
+  }else{
+    directory2<-"/Users/Linix100/Documents/301-450.txt"
+    #directory2<-"/Users/Linix100/Documents/Irosha/federalist_ Preprocessed_ papers-1/Hamilton/fileproc_01 copy 2.txt"
+  }
+  s1<-scan(directory2,what="")
+  s2<-as.character(s1)
+  s3<-strsplit(s2,"")
+  s4<-unlist(s3)
+  s5<-tolower(s4)
+  t_end2<-length(s5)
+  y<-floor(t_end2/x)
+  
+  yn<-y*x
+  
+  
+  #pass value to make vector2 a matrix
+  s6<-s5[1:yn]
+  
+  #temperary test
+  #library(VLMC)
+  #vc<-vlmc(s6,15)
+  #return(vc)
+  
+  qmatrix<-matrix(s6,ncol=x,byrow=TRUE)
+  
+  return(qmatrix)
+  
+  
+  
+}
